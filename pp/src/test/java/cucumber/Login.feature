@@ -1,12 +1,12 @@
 
 Feature: Title of your feature
-  I want to use this template for my feature file
-
-  Scenario: Title of your scenario
-    Given I want to write a step with precondition
-    And some other precondition
-    When I complete action
-    And some other action
-    And yet another action
-    Then I validate the outcomes
-    And check more outcomes
+ 
+  Scenario Outline: Login
+    Given I want to type the URL
+    Then   I click on SignIn button
+    And   I Enter "<Username>" and "<password>"
+    And I click on Login 
+    Then TestMe app Homepage is displayed
+    Examples:
+      | Username  | password    | 
+      | lalitha   | password123 |
